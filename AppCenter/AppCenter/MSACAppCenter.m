@@ -290,7 +290,6 @@ static const long kMSACMinUpperSizeLimitInBytes = 24 * 1024;
     @"MSStartServiceLog" : MSACStartServiceLog.self,
     @"MSSessionHistoryInfo" : MSACSessionHistoryInfo.self,
     @"MSUserIdHistoryInfo" : MSACUserIdHistoryInfo.self,
-    @"MSLogWithProperties" : MSACLogWithProperties.self,
     @"MSLogContainer" : MSACLogContainer.self,
     @"MSLogWithProperties" : MSACLogWithProperties.self,
     @"MSWrapperSdk" : MSACWrapperSdk.self,

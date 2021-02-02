@@ -20,6 +20,7 @@
 #import "MSACHttpClient.h"
 #import "MSACKeychainUtil.h"
 #import "MSACSessionContext.h"
+#import <objc/message.h>
 
 /**
  * Service storage key name.
@@ -658,7 +659,7 @@ static dispatch_once_t onceToken;
 
 - (BOOL)openUrlUsingSharedApp:(NSURL *)url {
   UIApplication *sharedApp = [MSACUtility sharedApp];
-  return (BOOL)[sharedApp performSelector:@selector(openURL:) withObject:url];
+    return ((BOOL (*)(id, SEL, ...))objc_msgSend)(sharedApp, @selector(openURL:));
 }
 
 - (void)openUrlInAuthenticationSessionOrSafari:(NSURL *)url {
